@@ -13,18 +13,6 @@ enum Brand : Int {
     case hyundai, toyota, kia, honda, nissan
     case ford, chevrolet
     
-    static var coolDesign: [Brand] = [
-        .bmw, .mercedes, .audi, .hyundai, .honda
-    ]
-    
-    static var coolReliability: [Brand] = [
-        .toyota, .ford, .chevrolet
-    ]
-    
-    static var testyPrice: [Brand] = [
-        .hyundai, .kia, .volkswagen
-    ]
-    
     static var humanReadableMap: [Brand: String] = [
         .bmw: "BMW",
         .mercedes: "Mercedes-Benz"
@@ -35,7 +23,6 @@ enum Brand : Int {
         return result.prefix(1).uppercased() + result.dropFirst()
     }
 }
-
 
 struct Score {
     let brand: Brand
