@@ -25,6 +25,10 @@ class QuestionViewController: UIViewController {
 
         loadQuestion()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animateButtons()
+    }
 
     func animateButtons() {
     
