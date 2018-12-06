@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		9508835221B810E300F6D7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508835121B810E300F6D7CC /* AppDelegate.swift */; };
-		9508835421B810E300F6D7CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508835321B810E300F6D7CC /* ViewController.swift */; };
+		9508835421B810E300F6D7CC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508835321B810E300F6D7CC /* StartViewController.swift */; };
 		9508835721B810E300F6D7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9508835521B810E300F6D7CC /* Main.storyboard */; };
 		9508835921B810E400F6D7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9508835821B810E400F6D7CC /* Assets.xcassets */; };
 		9508835C21B810E400F6D7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9508835A21B810E400F6D7CC /* LaunchScreen.storyboard */; };
+		9508836421B8194A00F6D7CC /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508836321B8194A00F6D7CC /* QuestionViewController.swift */; };
+		9508836621B824C000F6D7CC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508836521B824C000F6D7CC /* Question.swift */; };
+		951B13C521B92D96006BA146 /* GrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B13C421B92D96006BA146 /* GrayButton.swift */; };
+		951B13C721B940BE006BA146 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B13C621B940BE006BA146 /* ResultViewController.swift */; };
+		951B13C921B945CE006BA146 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951B13C821B945CE006BA146 /* NavigationViewController.swift */; };
+		9529097821B95FCC00D2017A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9529097721B95FCC00D2017A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9508834E21B810E300F6D7CC /* Car Chooser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Car Chooser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9508835121B810E300F6D7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9508835321B810E300F6D7CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9508835321B810E300F6D7CC /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9508835621B810E300F6D7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9508835821B810E400F6D7CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9508835B21B810E400F6D7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9508835D21B810E400F6D7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9508836321B8194A00F6D7CC /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		9508836521B824C000F6D7CC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		951B13C421B92D96006BA146 /* GrayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayButton.swift; sourceTree = "<group>"; };
+		951B13C621B940BE006BA146 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		951B13C821B945CE006BA146 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		9529097721B95FCC00D2017A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 		9508834521B810E300F6D7CC = {
 			isa = PBXGroup;
 			children = (
+				9529097721B95FCC00D2017A /* .gitignore */,
 				9508835021B810E300F6D7CC /* Car Chooser */,
 				9508834F21B810E300F6D7CC /* Products */,
 			);
@@ -55,11 +68,16 @@
 			isa = PBXGroup;
 			children = (
 				9508835121B810E300F6D7CC /* AppDelegate.swift */,
-				9508835321B810E300F6D7CC /* ViewController.swift */,
+				9508835321B810E300F6D7CC /* StartViewController.swift */,
+				9508836321B8194A00F6D7CC /* QuestionViewController.swift */,
 				9508835521B810E300F6D7CC /* Main.storyboard */,
 				9508835821B810E400F6D7CC /* Assets.xcassets */,
 				9508835A21B810E400F6D7CC /* LaunchScreen.storyboard */,
 				9508835D21B810E400F6D7CC /* Info.plist */,
+				9508836521B824C000F6D7CC /* Question.swift */,
+				951B13C421B92D96006BA146 /* GrayButton.swift */,
+				951B13C621B940BE006BA146 /* ResultViewController.swift */,
+				951B13C821B945CE006BA146 /* NavigationViewController.swift */,
 			);
 			path = "Car Chooser";
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9529097821B95FCC00D2017A /* .gitignore in Resources */,
 				9508835C21B810E400F6D7CC /* LaunchScreen.storyboard in Resources */,
 				9508835921B810E400F6D7CC /* Assets.xcassets in Resources */,
 				9508835721B810E300F6D7CC /* Main.storyboard in Resources */,
@@ -135,8 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9508835421B810E300F6D7CC /* ViewController.swift in Sources */,
+				9508835421B810E300F6D7CC /* StartViewController.swift in Sources */,
+				9508836621B824C000F6D7CC /* Question.swift in Sources */,
 				9508835221B810E300F6D7CC /* AppDelegate.swift in Sources */,
+				951B13C521B92D96006BA146 /* GrayButton.swift in Sources */,
+				9508836421B8194A00F6D7CC /* QuestionViewController.swift in Sources */,
+				951B13C921B945CE006BA146 /* NavigationViewController.swift in Sources */,
+				951B13C721B940BE006BA146 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

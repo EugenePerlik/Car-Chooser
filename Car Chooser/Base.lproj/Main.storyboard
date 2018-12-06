@@ -1,24 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Car_Chooser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-maker-logos-9" translatesAutoresizingMaskIntoConstraints="NO" id="KEN-VU-tx0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5P-M1-ppM">
+                                <rect key="frame" x="16" y="273" width="288" height="42"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Подобрать авто"/>
+                                <connections>
+                                    <action selector="chooseCarButtnoTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agQ-6k-7sE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KEN-VU-tx0" secondAttribute="bottom" id="DMf-95-XvX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u5P-M1-ppM" secondAttribute="trailing" constant="16" id="PMS-35-SGs"/>
+                            <constraint firstAttribute="trailing" secondItem="KEN-VU-tx0" secondAttribute="trailing" id="QOG-kh-h3y"/>
+                            <constraint firstItem="u5P-M1-ppM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fNi-6B-CDr"/>
+                            <constraint firstItem="u5P-M1-ppM" firstAttribute="centerX" secondItem="KEN-VU-tx0" secondAttribute="centerX" id="jli-8b-fGC"/>
+                            <constraint firstItem="u5P-M1-ppM" firstAttribute="centerY" secondItem="KEN-VU-tx0" secondAttribute="centerY" id="vnj-DI-EX6"/>
+                            <constraint firstItem="KEN-VU-tx0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vsi-4Y-Nis"/>
+                            <constraint firstItem="KEN-VU-tx0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="ygQ-7V-Pb4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroudImageView" destination="KEN-VU-tx0" id="czu-BB-BIb"/>
+                        <outlet property="chooseCarButton" destination="u5P-M1-ppM" id="vbr-b6-Uax"/>
+                        <segue destination="QTD-3T-HdI" kind="show" identifier="startGameSegue" id="DPA-Uh-MiQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="HcL-J5-C85" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="63.75" y="38.75"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="tbI-tL-uPc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="QTD-3T-HdI" customClass="NavigationViewController" customModule="Car_Chooser" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="STo-mp-6Zf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GAL-Hl-Ic2" kind="relationship" relationship="rootViewController" id="mwn-iV-sIs"/>
+                        <segue destination="HcL-J5-C85" kind="unwind" identifier="backToStart" unwindAction="unwindWithSegue:" id="teh-fo-H6f"/>
+                        <segue destination="XZb-eH-2I8" kind="show" identifier="result" id="hER-Nq-YXS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAX-yr-nKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="39"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="44z-NF-9tz">
+            <objects>
+                <viewController storyboardIdentifier="questionViewController" id="GAL-Hl-Ic2" customClass="QuestionViewController" customModule="Car_Chooser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UA6-pL-eLh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v0O-aZ-ykM">
+                                <rect key="frame" x="16" y="294" width="288" height="258"/>
+                                <subviews>
+                                    <button opaque="NO" tag="777" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg8-iQ-Nc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="80.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Первый вариант"/>
+                                        <connections>
+                                            <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="Nhd-cT-z6W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geD-aJ-W7n">
+                                        <rect key="frame" x="0.0" y="88.5" width="288" height="81"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Второй вариант"/>
+                                        <connections>
+                                            <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="gu8-VO-NGO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU9-wX-gpd">
+                                        <rect key="frame" x="0.0" y="177.5" width="288" height="80.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Третий вариант"/>
+                                        <connections>
+                                            <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="zCD-TC-uJI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdN-Ra-qnV">
+                                <rect key="frame" x="16" y="36" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n65-Iz-SxG"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTouchUp:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="fJo-cK-duF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задаю какой-нибудь вопрос?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-sc-mH7">
+                                <rect key="frame" x="16" y="82" width="288" height="196"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QdN-Ra-qnV" firstAttribute="top" secondItem="fkx-B0-S0y" secondAttribute="top" constant="16" id="2EO-4i-EGi"/>
+                            <constraint firstItem="QdN-Ra-qnV" firstAttribute="leading" secondItem="fkx-B0-S0y" secondAttribute="leading" constant="16" id="9VH-kM-yFM"/>
+                            <constraint firstItem="fkx-B0-S0y" firstAttribute="bottom" secondItem="v0O-aZ-ykM" secondAttribute="bottom" constant="16" id="Dod-Pe-UxF"/>
+                            <constraint firstItem="jbp-sc-mH7" firstAttribute="leading" secondItem="fkx-B0-S0y" secondAttribute="leading" constant="16" id="ErL-8f-vtB"/>
+                            <constraint firstItem="v0O-aZ-ykM" firstAttribute="leading" secondItem="fkx-B0-S0y" secondAttribute="leading" constant="16" id="df8-Y1-1ef"/>
+                            <constraint firstItem="v0O-aZ-ykM" firstAttribute="top" secondItem="jbp-sc-mH7" secondAttribute="bottom" constant="16" id="k8p-6r-w7m"/>
+                            <constraint firstItem="fkx-B0-S0y" firstAttribute="trailing" secondItem="jbp-sc-mH7" secondAttribute="trailing" constant="16" id="kfu-Kv-dTi"/>
+                            <constraint firstItem="jbp-sc-mH7" firstAttribute="top" secondItem="QdN-Ra-qnV" secondAttribute="bottom" constant="16" id="pNs-Ri-pm0"/>
+                            <constraint firstItem="fkx-B0-S0y" firstAttribute="trailing" secondItem="v0O-aZ-ykM" secondAttribute="trailing" constant="16" id="uVs-wP-0a9"/>
+                            <constraint firstItem="v0O-aZ-ykM" firstAttribute="top" secondItem="fkx-B0-S0y" secondAttribute="centerY" id="yox-e0-mFB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fkx-B0-S0y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E73-OY-1rq"/>
+                    <connections>
+                        <outlet property="buttons" destination="v0O-aZ-ykM" id="Ydj-lA-m5H"/>
+                        <outlet property="questionLabel" destination="jbp-sc-mH7" id="VsL-TL-QAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPg-BJ-pA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.75" y="38.75"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="QHZ-Tp-mF1">
+            <objects>
+                <viewController id="XZb-eH-2I8" customClass="ResultViewController" customModule="Car_Chooser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gLE-Tl-WDp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FU8-SS-XIH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="467"/>
+                                <string key="text">Вам стоит рассмотреть: Mercedes-Benz
+BMW</string>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="33"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="777" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpQ-fr-g8j">
+                                <rect key="frame" x="16" y="503" width="288" height="49"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Rw2-lI-k5E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Начать заново"/>
+                                <connections>
+                                    <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="nSG-S7-flT"/>
+                                    <segue destination="HcL-J5-C85" kind="unwind" unwindAction="unwindWithSegue:" id="s5g-VL-BgR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FU8-SS-XIH" firstAttribute="leading" secondItem="3Fa-lO-wkd" secondAttribute="leading" id="IW9-vf-IxQ"/>
+                            <constraint firstItem="3Fa-lO-wkd" firstAttribute="trailing" secondItem="FU8-SS-XIH" secondAttribute="trailing" id="Muh-15-Mdu"/>
+                            <constraint firstItem="WpQ-fr-g8j" firstAttribute="leading" secondItem="3Fa-lO-wkd" secondAttribute="leading" constant="16" id="SeU-oQ-ptS"/>
+                            <constraint firstItem="WpQ-fr-g8j" firstAttribute="top" secondItem="FU8-SS-XIH" secondAttribute="bottom" constant="16" id="YDz-jw-hc8"/>
+                            <constraint firstItem="FU8-SS-XIH" firstAttribute="top" secondItem="3Fa-lO-wkd" secondAttribute="top" id="alP-N5-E39"/>
+                            <constraint firstItem="3Fa-lO-wkd" firstAttribute="trailing" secondItem="WpQ-fr-g8j" secondAttribute="trailing" constant="16" id="b0F-rF-0De"/>
+                            <constraint firstItem="3Fa-lO-wkd" firstAttribute="bottom" secondItem="WpQ-fr-g8j" secondAttribute="bottom" constant="16" id="h1w-ro-O9s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Fa-lO-wkd"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="FU8-SS-XIH" id="XY2-li-uOf"/>
+                        <outlet property="startAgainButton" destination="WpQ-fr-g8j" id="22N-Mv-VKy"/>
+                        <segue destination="HcL-J5-C85" kind="unwind" identifier="startGame" unwindAction="unwindWithSegue:" id="prs-4q-gmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Coz-7d-o9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car-maker-logos-9" width="2500" height="1723"/>
+    </resources>
 </document>
