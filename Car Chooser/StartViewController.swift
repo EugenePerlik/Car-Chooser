@@ -30,9 +30,7 @@ class StartViewController: UIViewController {
         startGame()
     }
 
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-        print(#function)
-    }
+    @IBAction func unwind(segue: UIStoryboardSegue) { }
     
     func startGame() {
         performSegue(withIdentifier: "startGameSegue", sender: self)

@@ -140,7 +140,6 @@ class Questions {
                         self.scores[score.brand] = 0
                     }
                     self.scores[score.brand]? += score.score
-                    print(self.scores)
                 }
             }
         }

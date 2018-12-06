@@ -47,7 +47,6 @@ class QuestionViewController: UIViewController {
         }
         
         guard let newViewController = storyboard?.instantiateViewController(withIdentifier: "questionViewController") else {
-            print("newViewController")
             return
         }
         if let vc = newViewController as? QuestionViewController {
