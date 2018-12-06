@@ -70,7 +70,7 @@ struct Result {
 class Questions {
     private(set) var position: Int = 0
     private(set) var scores: [Brand: Int] = [:]
-    private let questions = [
+    private(set) var questions = [
         Question(question: "Что для вас важно в авто?", imageName: nil, type:
             .choose([
                 .withVariant("Дизайн",

@@ -13,6 +13,7 @@ class QuestionViewController: UIViewController {
     
     var tempView: UIView?
     
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var buttons: UIStackView!
     
@@ -69,9 +70,15 @@ class QuestionViewController: UIViewController {
     }
     
     func loadQuestion() {
-        guard let question = questions?.currentQuestion else {
+        guard let questions = questions else {
             return
         }
+        guard let question = questions.currentQuestion else {
+            return
+        }
+        
+        progressBar.progress = Float(questions.position) /
+                               Float(questions.questions.count)
         
         questionLabel.text = question.question
         switch question.type {
