@@ -77,8 +77,8 @@ class QuestionViewController: UIViewController {
             return
         }
         
-        progressBar.progress = Float(questions.position) /
-                               Float(questions.questions.count)
+        let progress = Float(questions.position) / Float(questions.questions.count)
+        progressBar.setProgress(progress, animated: true)
         
         questionLabel.text = question.question
         switch question.type {

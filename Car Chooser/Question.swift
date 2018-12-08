@@ -71,29 +71,29 @@ class Questions {
     private(set) var position: Int = 0
     private(set) var scores: [Brand: Int] = [:]
     private(set) var questions = [
-        Question(question: "Что для вас важно в авто?", imageName: nil, type:
+        Question(question: "What is important for you in cars?", imageName: nil, type:
             .choose([
-                .withVariant("Дизайн",
+                .withVariant("Design",
                              .scores(for:  [.bmw, .mercedes, .audi, .hyundai, .honda], 3)),
-                .withVariant("Надежность",
+                .withVariant("Reliability",
                              .scores(for: [.toyota, .ford, .chevrolet], 3)),
-                .withVariant("Цена",
+                .withVariant("Cost",
                              .scores(for: [.hyundai, .kia, .volkswagen], 3))
             ])
         ),
-        Question(question: "Часто вступаете в комфликты?", imageName: nil, type:
+        Question(question: "How often come into conflict?", imageName: nil, type:
             .choose([
-                .withVariant("Да, часто",
+                .withVariant("Yes, of course",
                              .scores(for: [.bmw, .toyota, .honda], 3)),
-                .withVariant("Нет, я стараюсь их избегать",
+                .withVariant("No, I try to avoid them.",
                              .scores(for: [.hyundai, .kia, .volkswagen], 3))
                 ])
         ),
-        Question(question: "Что для вас ближе?", imageName: nil, type:
+        Question(question: "What is closer to you?", imageName: nil, type:
             .choose([
-                .withVariant("Деньги, власть",
+                .withVariant("Money, Authority",
                              .scores(for: [.bmw, .toyota, .honda], 3)),
-                .withVariant("Природа, семья",
+                .withVariant("Nature, Family",
                              .scores(for: [.hyundai, .kia, .volkswagen, .ford, .chevrolet], 3))
                 ])
         ),

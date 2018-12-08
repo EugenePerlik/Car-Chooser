@@ -24,9 +24,9 @@ class ResultViewController: UIViewController {
             let cars = result.brands.reduce("") {
                 return "\($0)\n\($1.name)"
             }
-            resultLabel.text = "Вам стоит рассмотреть:\(cars)"
+            resultLabel.text = "You should buy:\(cars)"
         } else {
-            resultLabel.text = "Мы ничего не подобрали"
+            resultLabel.text = "We have not picked up anything"
         }
     }
 }

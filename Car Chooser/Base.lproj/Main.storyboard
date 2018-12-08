@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Подобрать авто"/>
+                                <state key="normal" title="Pick up cars"/>
                                 <connections>
                                     <action selector="chooseCarButtnoTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agQ-6k-7sE"/>
                                 </connections>
@@ -38,8 +38,10 @@
                             <constraint firstAttribute="bottom" secondItem="KEN-VU-tx0" secondAttribute="bottom" id="DMf-95-XvX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u5P-M1-ppM" secondAttribute="trailing" constant="16" id="PMS-35-SGs"/>
                             <constraint firstAttribute="trailing" secondItem="KEN-VU-tx0" secondAttribute="trailing" id="QOG-kh-h3y"/>
+                            <constraint firstItem="u5P-M1-ppM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dOd-3o-dUF"/>
                             <constraint firstItem="u5P-M1-ppM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fNi-6B-CDr"/>
                             <constraint firstItem="u5P-M1-ppM" firstAttribute="centerX" secondItem="KEN-VU-tx0" secondAttribute="centerX" id="jli-8b-fGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u5P-M1-ppM" secondAttribute="trailing" constant="16" id="rsr-3O-m7c"/>
                             <constraint firstItem="u5P-M1-ppM" firstAttribute="centerY" secondItem="KEN-VU-tx0" secondAttribute="centerY" id="vnj-DI-EX6"/>
                             <constraint firstItem="KEN-VU-tx0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vsi-4Y-Nis"/>
                             <constraint firstItem="KEN-VU-tx0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="ygQ-7V-Pb4"/>
@@ -90,7 +92,7 @@
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Первый вариант"/>
+                                        <state key="normal" title="First Variant"/>
                                         <connections>
                                             <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="Nhd-cT-z6W"/>
                                         </connections>
@@ -100,7 +102,7 @@
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Второй вариант"/>
+                                        <state key="normal" title="Second Variant"/>
                                         <connections>
                                             <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="gu8-VO-NGO"/>
                                         </connections>
@@ -110,7 +112,7 @@
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Третий вариант"/>
+                                        <state key="normal" title="Third Variant"/>
                                         <connections>
                                             <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="zCD-TC-uJI"/>
                                         </connections>
@@ -129,7 +131,7 @@
                                     <action selector="backButtonTouchUp:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="fJo-cK-duF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задаю какой-нибудь вопрос?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-sc-mH7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask any question?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jbp-sc-mH7">
                                 <rect key="frame" x="16" y="82" width="288" height="196"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="32"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,7 +197,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FU8-SS-XIH">
                                 <rect key="frame" x="0.0" y="20" width="320" height="467"/>
-                                <string key="text">Вам стоит рассмотреть: Mercedes-Benz
+                                <string key="text">You should buy: Mercedes-Benz
 BMW</string>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="33"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,7 +211,7 @@ BMW</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Начать заново"/>
+                                <state key="normal" title="Try Again"/>
                                 <connections>
                                     <action selector="variantChoosed:" destination="GAL-Hl-Ic2" eventType="touchUpInside" id="nSG-S7-flT"/>
                                     <segue destination="HcL-J5-C85" kind="unwind" unwindAction="unwindWithSegue:" id="s5g-VL-BgR"/>
